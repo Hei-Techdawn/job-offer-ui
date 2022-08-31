@@ -10,7 +10,6 @@
 
 .simple-card > * > input{
     background: transparent;
-    color: white !important;
 }
 
 .simple-card>*>input:focus{

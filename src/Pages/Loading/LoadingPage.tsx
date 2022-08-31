@@ -1,19 +1,25 @@
 import { FC, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Loading } from '../../Components/Common/Loading/Loading';
 import './style.css';
 
 export const LoadingPage: FC = () => {
     const navigate = useNavigate();
+    const {search} = useLocation();
+    const to = new URLSearchParams(search).get("to");
     useEffect(() => {
         const i = setTimeout(() => {
-            navigate('/login');
+            if(to === "landing"){
+                navigate("/landing")
+            }else {
+                navigate('/login ');
+            }
         }, 2000);
         return () => clearTimeout(i);
     }, [navigate]);
 
     return (
-        <div className='flex-center fullscreen bg-dark '>
+        <div className='flex-center fullscreen bg-light '>
             <Loading/>
         </div>
     );

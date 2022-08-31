@@ -4,8 +4,8 @@ import './style.css';
 
 export const Login: FC = () => {
     return (
-        <div className='z--1 fullscreen bg-dark'>
-            <LoginCard className=' simple-card' />
+        <div className='z--1 fullscreen bg-light'>
+            <LoginCard className='simple-card' />
         </div>
     );
 };
