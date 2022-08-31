@@ -9,8 +9,10 @@ export const LoadingPage: FC = () => {
     const to = new URLSearchParams(search).get("to");
     useEffect(() => {
         const i = setTimeout(() => {
-            if(to === "landing"){
-                navigate("/landing")
+            if (to === 'landing') {
+                navigate('/landing');
+            } else if (localStorage.getItem('password')) {
+                navigate("/dashboard");
             }else {
                 navigate('/login ');
             }

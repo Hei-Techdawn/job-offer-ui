@@ -14,8 +14,8 @@ export const TopMenu: FC<{ className?: string }> = ({ className }) => {
     };
 
     const login = () => {
-        navigate('/')
-    }
+        navigate('/');
+    };
 
     return (
         <div
@@ -25,20 +25,36 @@ export const TopMenu: FC<{ className?: string }> = ({ className }) => {
         >
             {menu !== undefined && (
                 <>
-                    <div onClick={menu.menuFunctions.toggleMenu} className='col-1'>
-                        {
-                            localStorage.getItem('password') !== null ? 
-                        <FaBars className='fs-4 icon' />
-                            : <FaBriefcase className='fs-4 icon'/>
-                        }
-                    </div>
-                    <div className='col-2 d-flex justify-content-end'>
+                    <div className='col-1'>
                         {localStorage.getItem('password') !== null ? (
-                            <FaSignOutAlt onClick={signOut} className='fs-4 icon' />
+                            <FaBars
+                                onClick={menu.menuFunctions.toggleMenu}
+                                className='fs-4 icon  text-light'
+                            />
                         ) : (
-                            <button onClick={login} className='border-theme btn btn-outline-dark'>
-                                Se Connecter
-                            </button>
+                            <a href='#home' className='home'>
+                                <FaBriefcase className='fs-4 icon  text-light' />
+                            </a>
+                        )}
+                    </div>
+                    <div className='col-3 d-flex justify-content-end'>
+                        {localStorage.getItem('password') !== null ? (
+                            <FaSignOutAlt onClick={signOut} className='fs-4 icon text-light' />
+                        ) : (
+                            <>
+                                <a
+                                    href='#footer'
+                                    className='border-theme btn m-2 btn-outline-primary'
+                                >
+                                    Recruteur
+                                </a>
+                                <button
+                                    onClick={login}
+                                    className='border-theme btn btn-outline-primary  m-2'
+                                >
+                                    Se Connecter
+                                </button>
+                            </>
                         )}
                     </div>
                 </>

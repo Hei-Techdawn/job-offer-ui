@@ -32,12 +32,12 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
     }
 
     return (
-        <div className={'abs-center p-3 flex-center text-dark ' + className}>
+        <div className={'abs-center p-3 flex-center text-light ' + className}>
             <form
                 onSubmit={handleSubmit}
-                className='input-form m-2 text-dark'
+                className='input-form m-2 text-light'
             >
-                <h1 className='display-6 text-dark mb-3'>Connexion</h1>
+                <h1 className='display-6 text-light mb-3'>Connexion</h1>
                 <LoginInput tools={tools} name='username' type='username' />
                 <LoginInput tools={tools} name='password' type='password' />
                 <button type='submit' className='w-100 mb-4 btn btn-outline-primary mt-4'>

@@ -6,7 +6,7 @@ import { Loading } from "../../Components/Common/Loading/Loading";
 
 export const Dashboard:FC = () => {
     return (
-        <div className='fullscreen bg-dark'>
+        <div className='fullscreen'>
             <div className='d-flex dashboard'>
                 <SideMenu/>
                 <div className="dashboard-content flex-center">

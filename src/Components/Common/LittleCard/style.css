@@ -1,0 +1,8 @@
+.little-card{
+    height: 18vw;
+    width: 22vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), 
+        -2px -2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: .2rem;
+    position: relative;
+}

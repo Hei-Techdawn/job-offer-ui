@@ -26,3 +26,14 @@ a.display-6{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
     padding-bottom: 1rem;
 }
+
+.all-card-container{
+    overflow-y: scroll;
+    transition: height 1s;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.toggle{
+    height: 3rem;
+}
