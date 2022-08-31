@@ -16,7 +16,7 @@ import { TPrincipalContext } from './Provider/context/types';
 
 export const App: FC = () => {
     const { open, snackState } = useSnackbar();
-    const menu = useMenu<TMenu>(TMenu.HOME);
+    const menu = useMenu<TMenu>(TMenu.LIST);
     const {modal, openModal} = useModal();
     const context: TPrincipalContext = { snackbar: open,modal: openModal, closeModal: modal.closeModal, menu };
 
