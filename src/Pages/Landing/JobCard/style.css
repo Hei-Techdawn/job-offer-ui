@@ -1,0 +1,13 @@
+
+.card-container{
+    transform: translateY(3rem) !important;
+}
+
+.toggle{
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    height: 3rem;
+}
+
+.reverse{
+    transform: rotate(100deg);
+}

@@ -43,7 +43,3 @@ a.display-6 {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
-.toggle {
-    height: 3rem;
-}

@@ -1,0 +1,8 @@
+.all-card-container{
+    transition: width 1s;
+    overflow-y: scroll;
+}
+
+.multiples-cards{
+    padding: 5rem 5rem 0 5rem;
+}
