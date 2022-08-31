@@ -1,8 +1,11 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { TLCProps } from './type';
 import './style.css'
+import { PrincipalContext } from '../../../Provider/context/contextProvider';
+import Postulates from '../Postulates/Postulates';
 
 export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, className }) => {
+    const context = useContext(PrincipalContext)
     return (
         <div className={`little-card p-2 text-light fs-6 ${className}`}>
             <div className='display-2 fs-5'>{info.domain}</div>
@@ -21,7 +24,10 @@ export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, c
                     <span>{info.site}</span>
                 </div>
             </div>
-            <button className='btn rounded-1 abs-end justify-self-end btn-outline-primary'>
+            <button
+                onClick={() => {context.modal(<Postulates/>)}}
+                className='btn rounded-1 abs-end justify-self-end btn-outline-primary'
+            >
                 Voir l'anonce
             </button>
         </div>

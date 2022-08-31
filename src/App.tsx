@@ -18,7 +18,7 @@ export const App: FC = () => {
     const { open, snackState } = useSnackbar();
     const menu = useMenu<TMenu>(TMenu.HOME);
     const {modal, openModal} = useModal();
-    const context: TPrincipalContext = { snackbar: open,modal: openModal, menu };
+    const context: TPrincipalContext = { snackbar: open,modal: openModal, closeModal: modal.closeModal, menu };
 
     return (
         <div className='background fullscreen'>
