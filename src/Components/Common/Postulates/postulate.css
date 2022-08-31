@@ -1,0 +1,23 @@
+.postulateTitle{
+    border-bottom: 1px solid black;
+}
+.postInfo{
+    width: 400px;
+}
+
+.userInfo{
+    width: 350px;
+}
+.inputMail{
+    margin-left: 50px;
+    width: 300px;
+}
+.salaire{
+    width: 350px;
+}
+.inputSalaire{
+    width: 150px;
+}
+span{
+    text-decoration: underline;
+}
