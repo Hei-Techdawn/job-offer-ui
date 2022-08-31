@@ -1,3 +1,4 @@
+body,
 .fullscreen {
     height: 100vh;
     width: 100vw;
@@ -21,4 +22,80 @@
 
 .z--1{
     z-index: -1 !important;
+}
+
+.btn{
+    transition: all .5s !important;
+}
+
+.btn:active,
+.btn:focus,
+.btn:hover{
+    background: none !important;
+    color: black;
+    border: 1px solid black !important;
+    outline: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+    border-radius: .2rem;
+}
+
+.btn:active{
+    font-size: 16px !important;
+}
+
+
+.border-theme{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+input{
+    border: 1px solid black;
+    color: black !important;
+}
+
+form{
+    color: black !important;
+}
+
+
+.background{
+    overflow: hidden;
+}
+
+.left--100{
+    position: relative;
+    left: -10%;
+    opacity: 0;
+    animation: left--100 1s forwards;
+}
+
+.right--100 {
+    position: relative;
+    left: 10%;
+    opacity: 0;
+    animation: right--100 1s forwards;
+}
+
+
+
+@keyframes right--100 {
+    0%{
+        left: 10%;
+        opacity: 0;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes left--100 {
+    0%{
+        left: -10%;
+        opacity: 0;
+    }
+    100%{
+        left: 0%;
+        opacity: 1;
+    }
 }

@@ -8,11 +8,11 @@ export const Modal: FC<{ modal: TModalProps; className?: string }> = ({ modal, c
     const [style, setStyle] = useState({ modal: {}, bg: {} });
 
     const openModal = () => {
-        setStyle({ modal: { top: '15%' }, bg: { bottom: '0' } });
+        setStyle({ modal: { top: '15%' }, bg: { left: '0%' } });
     };
 
     const close = () => {
-        setStyle({ modal: { top: '-100%' }, bg: { bottom: '-100%' } });
+        setStyle({ modal: { top: '-100%' }, bg: { left: '100%' } });
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export const Modal: FC<{ modal: TModalProps; className?: string }> = ({ modal, c
 
     return (
         <>
-            <div style={style.bg} className='modal-bg'></div>
+            <div style={style.bg} className='fullscreen modal-bg'></div>
             <div style={style.modal} className={`empty-modal ${className}`}>
                 <BiXCircle onClick={closeModal} className='modal-close' />
                 {content}

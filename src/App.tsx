@@ -21,7 +21,7 @@ export const App: FC = () => {
     const context: TPrincipalContext = { snackbar: open,modal: openModal, menu };
 
     return (
-        <div>
+        <div className='background fullscreen'>
             {context.menu !== undefined && (
                 <PrincipalContext.Provider value={context}>
                     <Routes>

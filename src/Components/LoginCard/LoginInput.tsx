@@ -4,13 +4,13 @@ import { TLoginInput } from './types';
 import { FocusEvent } from 'react';
 
 export const LoginInput: FC<TLoginInput> = ({ tools, name, type }) => {
-    const [style, setStyle] = useState<CSSProperties>({border: "1px solid white"});
+    const [style, setStyle] = useState<CSSProperties>({border: "1px solid black"});
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
         if(!tools.validator(e)){
-            setStyle({ border: '1px solid red' });
+            setStyle({ border: '1px solid red', color: "black" });
         }else {
-            setStyle({ border: '1px solid green' });
+            setStyle({ border: '1px solid green', color: 'black' });
         }
     }
 
