@@ -1,0 +1,64 @@
+.side-menu {
+    height: 100%;
+    width: 14.5rem;
+    border-right: 1rem solid #0d6efd;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    transition: width 1s;
+    cursor: pointer;
+}
+
+.side-menu>div> {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-menu>div>.menu-items {
+    height: 4rem;
+    margin-left: .5rem;
+}
+
+.side-menu>div>.active {
+    background: #0d6efd;
+    position: relative;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.side-menu>div>.active::before {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    right: .5rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: 1rem 1rem 0 #0d6efd;
+}
+
+.side-menu>div>.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    right: .5rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: 1rem -1rem 0 #0d6efd;
+}
+
+.side-menu>div>.menu-items>.sm-icon {
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+.side-menu>div>.menu-items>.sm-label {
+    height: 4rem;
+    text-align: center;
+    line-height: 3.5rem;
+    position: absolute;
+    left: 5rem;
+}
