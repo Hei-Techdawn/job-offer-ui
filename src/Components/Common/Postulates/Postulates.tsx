@@ -40,8 +40,6 @@ const Postulates: React.FC<PostulatesProps> = (props) => {
                                 <input
                                     type='text'
                                     className='form-control'
-                                    name=''
-                                    id=''
                                     aria-describedby='helpId'
                                     placeholder=''
                                 />
