@@ -12,7 +12,7 @@ const Postulates: React.FC<PostulatesProps> = (props) => {
     return (
         <div className='postulate container'>
             <div className='text-center postulateTitle'>
-                <h1 className='text-uppercase display-6 fs-4'>Postuler a une offre d'emploi</h1>
+                <h1 className='text-uppercase display-6 fs-4'>Postuler a une offre d'emploie</h1>
             </div>
             <div className='info d-flex'>
                 <div className='postInfo'>
