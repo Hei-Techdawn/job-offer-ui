@@ -1,3 +1,7 @@
 .home-image{
     height: 90vh;
 }
+
+.welcome-page> * > p{
+    display: inline-block !important;
+}

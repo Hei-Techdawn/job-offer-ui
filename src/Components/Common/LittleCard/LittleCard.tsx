@@ -8,10 +8,11 @@ export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, c
     const context = useContext(PrincipalContext)
     return (
         <div className={`little-card p-2 text-dark fs-6 ${className}`}>
-            <div className='display-2 fs-5'>{info.domain}</div>
-            <hr />
             <div className='w-100 d-flex flex-column justify-content-center align-items-center h-50 mt-2 mb-2'>
-                <div className='d-flex w-75 justify-content-between'>
+                <div className="ribbon-container flex-center">
+                    <div className="flex-center text-light ribbon">{info.domain}</div>
+                </div>
+                <div className='d-flex w-75 mt-5 justify-content-between'>
                     <span>Poste:&nbsp;</span>
                     <span>{info.job}</span>
                 </div>

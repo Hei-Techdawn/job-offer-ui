@@ -1,36 +1,4 @@
 .footer{
-    height: 270px;
-    text-align: center;
-}
-.bloc{
-    width: 22rem;
-    height: 12rem;
-    
-}
-.blocOne{
-    padding-top: 20px;
-}
-.blocTwo{
-    padding-left: 70px;
-    padding-top: 30px;
-}
-.blocFree{
-    padding-left: 50px;
-    padding-top: 30px;
-}
-.title{
-    margin-top: -50px;
-}
-.titlePhone{
-    margin-top: -10px;
-}
-.contactNumber{
-    margin-left: 30px;
-}
-.pFixe{
-    margin-left: -30px;
-}
-
-.Ville{
-    margin-left: -175px;
+    height: 60vh;
+    padding: 5rem 5rem 0 5rem;
 }
