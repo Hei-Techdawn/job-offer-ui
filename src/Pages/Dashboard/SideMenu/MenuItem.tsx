@@ -8,7 +8,7 @@ export const MenuItem: FC<TMenuItemsProps> = ({ className, icon, menuType }) => 
 
     return menu !== undefined ? (
         <div
-            className={`${cN} ${menu.menuInfo.selected === menuType ? 'active text-darkBlue' : 'text-light'}`}
+            className={`${cN} ${menu.menuInfo.selected === menuType && 'active'}`}
             onClick={() => menu.menuFunctions.setMenu(menuType)}
         >
             <div className='sm-icon'>{icon}</div>

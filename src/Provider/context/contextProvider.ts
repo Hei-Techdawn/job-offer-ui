@@ -3,7 +3,7 @@ import { TPrincipalContext } from "./types";
 
 export const initialContext: TPrincipalContext = {
     snackbar: (e,b)=> void {},
-    modal: (e)=> {},
+    modal: (e, cN)=> {},
     closeModal: () => {},
 }
 

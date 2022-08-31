@@ -34,7 +34,7 @@ export const App: FC = () => {
                 </PrincipalContext.Provider>
             )}
             <Snackbar snackState={snackState} className="" />
-            <Modal modal={modal} className=""/>
+            <Modal modal={modal} className={modal.cN || ''}/>
         </div>
     );
 };

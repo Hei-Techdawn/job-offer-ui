@@ -5,7 +5,7 @@ import "./style.css"
 export const ErrorPage: FC = () => {
     const {code, message} = getErrorParams();
     return (
-        <div className='text-light flex-center fullscreen bg-dark'>
+        <div className='flex-center fullscreen'>
             <div className='row'>
                 <div className='border-right p-3 col-6 d-flex align-items-end justify-content-end'>
                     <h1 className='display-1'>{code}</h1>

@@ -24,5 +24,5 @@ export type useMenuState<T> = {
 
 
 export enum TMenu {
-    LIST = "List", HISTORY = "History", ADD = "ADD"
+    LIST = "List", HISTORY = "History", ADD = "Add"
 }

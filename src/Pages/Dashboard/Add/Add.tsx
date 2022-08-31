@@ -74,7 +74,7 @@ const Add = () => {
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddPoste/>)}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddPoste/>, "bg-success")}}>
                             {' '}
                             <FaPlus /> Poste
                         </button>

@@ -14,7 +14,6 @@ export const Modal: FC<{ modal: TModalProps; className?: string }> = ({ modal, c
     const close = () => {
         setStyle({ modal: { top: '-100%' }, bg: { left: '100%' } });
     };
-
     useEffect(() => {
         if (status) {
             openModal();

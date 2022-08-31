@@ -4,6 +4,7 @@ export type TModalProps = {
     content: ReactNode;
     status: boolean;
     closeModal: () => void;
+    cN?: string
 }
 
 export type useModalReturn = {
@@ -11,7 +12,8 @@ export type useModalReturn = {
     modal: TModalProps
 }
 
-export type TModalProperty = {
+export type TModalProperties = {
     content: ReactNode | null;
     status: boolean;
+    cN?: string
 }
