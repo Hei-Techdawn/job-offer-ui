@@ -2,7 +2,7 @@ import React from 'react';
 
 const List = () => {
     return (
-        <div className='w-100 container text-black h-100 p-3'>
+        <div className='w-100 container text-dark h-100 p-3'>
             <div className='w-100'>
                 <div className='d-flex w-50 justify-content-start'>
                     <div className=''>
@@ -19,7 +19,7 @@ const List = () => {
             </div>
             <div className='w-100 mt-1'>
                 <table className='table'>
-                    <thead className='table-black text-light bg-black'>
+                    <thead className='table-dark text-light bg-dark'>
                         <tr>
                             <td>Reference</td>
                             <td>Domaine</td>
@@ -28,7 +28,7 @@ const List = () => {
                             <td className='w-25'>Actions</td>
                         </tr>
                     </thead>
-                    <tbody className='text-black'>
+                    <tbody className='text-dark'>
                         <tr>
                             <td>REF-001</td>
                             <td>Informatique</td>

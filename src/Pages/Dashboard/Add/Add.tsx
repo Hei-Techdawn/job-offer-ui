@@ -10,10 +10,10 @@ import AddOffre from './AddOffre'
 const Add = () => {
   const context = useContext(PrincipalContext)
     return (
-        <div className='w-100 container text-black h-100 p-3'>
+        <div className='w-100 container text-dark h-100 p-3'>
             <div className='w-100 mt-1'>
                 <table className='table'>
-                    <thead className='table-black text-light bg-black'>
+                    <thead className='table-dark text-light bg-dark'>
                         <tr>
                             <td>Reference</td>
                             <td>Domaine</td>
@@ -22,7 +22,7 @@ const Add = () => {
                             <td>Profile</td>
                         </tr>
                     </thead>
-                    <tbody className='text-black'>
+                    <tbody className='text-dark'>
                         <tr>
                             <td>REF-001</td>
                             <td>Informatique</td>
@@ -62,32 +62,32 @@ const Add = () => {
                 </table>
                 <div className='d-flex w-100 justify-content-evenly'>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddOffre/>)}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddOffre/>, "bg-secondary")}}>
                             {' '}
                             <FaPlus /> offre
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddDomaine/>)}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddDomaine/>, "bg-secondary")}}>
                             {' '}
                             <FaPlus /> Domaine
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddPoste/>, "bg-success")}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddPoste/>, "bg-secondary")}}>
                             {' '}
                             <FaPlus /> Poste
                         </button>
                     </div>
 
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddLieu/>)}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddLieu/>, "bg-secondary")}}>
                             {' '}
                             <FaPlus /> Lieu
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddProfile/>)}}>
+                        <button className='btn btn-warning' onClick={() => {context.modal(<AddProfile/>, "bg-secondary")}}>
                             {' '}
                             <FaPlus /> Profile
                         </button>
