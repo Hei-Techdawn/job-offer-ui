@@ -29,28 +29,28 @@ export const TopMenu: FC<{ className?: string }> = ({ className }) => {
                         {localStorage.getItem('password') !== null ? (
                             <FaBars
                                 onClick={menu.menuFunctions.toggleMenu}
-                                className='fs-4 icon  text-light'
+                                className='fs-4 icon  text-warning'
                             />
                         ) : (
                             <a href='#home' className='home'>
-                                <FaBriefcase className='fs-4 icon  text-light' />
+                                <FaBriefcase className='fs-4 icon text-warning' />
                             </a>
                         )}
                     </div>
                     <div className='col-3 d-flex justify-content-end'>
                         {localStorage.getItem('password') !== null ? (
-                            <FaSignOutAlt onClick={signOut} className='fs-4 icon text-light' />
+                            <FaSignOutAlt onClick={signOut} className='fs-4 icon text-warning' />
                         ) : (
                             <>
                                 <a
                                     href='#footer'
-                                    className='border-theme btn m-2 btn-outline-primary'
+                                    className='border-theme btn m-2 btn-warning'
                                 >
                                     Recruteur
                                 </a>
                                 <button
                                     onClick={login}
-                                    className='border-theme btn btn-outline-primary  m-2'
+                                    className='border-theme btn btn-warning m-2'
                                 >
                                     Se Connecter
                                 </button>

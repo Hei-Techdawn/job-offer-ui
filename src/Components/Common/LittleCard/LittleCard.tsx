@@ -7,7 +7,7 @@ import Postulates from '../Postulates/Postulates';
 export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, className }) => {
     const context = useContext(PrincipalContext)
     return (
-        <div className={`little-card p-2 text-light fs-6 ${className}`}>
+        <div className={`little-card p-2 text-dark fs-6 ${className}`}>
             <div className='display-2 fs-5'>{info.domain}</div>
             <hr />
             <div className='w-100 d-flex flex-column justify-content-center align-items-center h-50 mt-2 mb-2'>
@@ -26,7 +26,7 @@ export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, c
             </div>
             <button
                 onClick={() => {context.modal(<Postulates/>)}}
-                className='btn rounded-1 abs-end justify-self-end btn-outline-primary'
+                className='btn rounded-1 abs-end justify-self-end btn-warning'
             >
                 Voir l'anonce
             </button>

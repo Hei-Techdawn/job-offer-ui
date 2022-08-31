@@ -7,7 +7,7 @@
     height: 10vh;
     padding-inline: 1rem !important;
     z-index: 2 !important;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
 }
 
 .top-menu>div>.icon{

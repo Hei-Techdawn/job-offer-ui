@@ -3,7 +3,7 @@ import './footer.css';
 
 const Footer: React.FC = () => {
     return (
-        <div className='footer text-light lb-size d-flex flex-column align-items-center justify-content-center' id='footer'>
+        <div className='footer text-dark lb-size d-flex flex-column align-items-center justify-content-center' id='footer'>
             <div>
                 <p className='text-uppercase'>
                     Vous etes recruteurs ? Contactez-NOUS pour que nous mettons en avant votre offre

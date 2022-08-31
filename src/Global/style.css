@@ -5,7 +5,15 @@ body,
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(-45deg, #000428,#004e92);
+    background: white;
+}
+
+.text-warning{
+    color: #ffb300 !important;
+}
+
+.bg-warning{
+    background: #ffb300 !important;
 }
 
 .abs-center {
@@ -45,7 +53,7 @@ body,
     position: relative;
     left: 10%;
     opacity: 0;
-    animation: right--100 1s forwards;
+    animation: right--100 2s forwards;
 }
 
 .top--100{
@@ -79,7 +87,7 @@ body,
 }
 @keyframes right--100 {
     0% {
-        left: 0%;
+        left: 10%;
         opacity: 0;
     }
 

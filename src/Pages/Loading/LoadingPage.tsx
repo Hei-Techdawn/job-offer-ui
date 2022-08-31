@@ -14,7 +14,7 @@ export const LoadingPage: FC = () => {
             } else if (localStorage.getItem('password')) {
                 navigate('/dashboard');
             } else {
-                navigate('/landing');
+                navigate('/login');
             }
         }, 2000);
         return () => clearTimeout(i);

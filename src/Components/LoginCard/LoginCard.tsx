@@ -33,17 +33,18 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
 
     return (
         <div className={'abs-center p-3 flex-center text-light ' + className}>
-            <form
-                onSubmit={handleSubmit}
-                className='input-form m-2 text-light'
-            >
+            <form onSubmit={handleSubmit} className='input-form m-2 text-light'>
                 <h1 className='display-6 text-light mb-3'>Connexion</h1>
                 <LoginInput tools={tools} name='username' type='username' />
                 <LoginInput tools={tools} name='password' type='password' />
-                <button type='submit' className='w-100 mb-4 btn btn-outline-primary mt-4'>
+                <button type='submit' className='w-100 mb-4 btn btn-warning mt-4'>
                     Sign In
                 </button>
-                <button onClick={landing} type='button' className='w-100 mb-4 btn btn-outline-primary'>
+                <button
+                    onClick={landing}
+                    type='button'
+                    className='w-100 mb-4 btn btn-warning'
+                >
                     Revenir à l'acceuil
                 </button>
             </form>

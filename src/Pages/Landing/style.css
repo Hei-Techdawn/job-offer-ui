@@ -1,8 +1,8 @@
-.landing-top-menu{
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2) !important;
+.landing-top-menu {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2) !important;
 }
 
-.landing-body{
+.landing-body {
     height: 90vh;
     width: 100vw;
     bottom: 0;
@@ -10,30 +10,40 @@
     overflow-y: scroll;
 }
 
-.lb-size{
+.lb-size {
     height: 90vh;
     width: 100vw;
 }
 
-a.display-6{
+a.display-6 {
     text-decoration: none;
 }
 
-.scroll-button{
-    height: 8rem;
-    width: 8rem;
+.scroll-button {
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);
-    padding-bottom: 1rem;
+    background: #e0e0e0;
+    box-shadow:  7px 7px 14px #afafaf,
+    -7px -7px 14px #ffffff;
 }
 
-.all-card-container{
+.in-scroll-button{
+    border-radius: 50%;
+    background: #ffc107;
+    height: 8rem;
+    width: 8rem;
+    box-shadow: inset 7px 7px 14px #afafaf,
+    inset -7px -7px 14px #ffffff;
+}
+
+.all-card-container {
     overflow-y: scroll;
     transition: height 1s;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.toggle{
+.toggle {
     height: 3rem;
 }

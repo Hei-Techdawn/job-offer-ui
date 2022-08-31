@@ -12,6 +12,6 @@ export const authProvider = async (username: string, password: string): Promise<
         localStorage.setItem("role", "role");
         localStorage.setItem("username", "username");
         localStorage.setItem("password", "password");
-        return authResult.SUCCESS;
+        return password === "12345678" ? authResult.SUCCESS : authResult.FAILED;
     }
 };
