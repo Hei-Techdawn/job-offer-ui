@@ -4,7 +4,7 @@ import { TLoginInput } from './types';
 import { FocusEvent } from 'react';
 
 export const LoginInput: FC<TLoginInput> = ({ tools, name, type }) => {
-    const [style, setStyle] = useState<CSSProperties>({border: "1px solid white"});
+    const [style, setStyle] = useState<CSSProperties>({border: "1px solid black"});
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
         if(!tools.validator(e)){
@@ -28,7 +28,7 @@ export const LoginInput: FC<TLoginInput> = ({ tools, name, type }) => {
             placeholder={textFormat(name)}
             name={name}
             value={tools.inputs[name]}
-            className='mt-3 form-control text-light'
+            className='mt-3 form-control text-black'
         />
     );
 };

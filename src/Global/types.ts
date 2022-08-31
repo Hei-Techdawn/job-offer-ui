@@ -22,6 +22,7 @@ export type useMenuState<T> = {
     selected: T;
 };
 
+
 export enum TMenu {
-    HOME="Home", BOOKS="Books",
+    LIST = "List", HISTORY = "History", ADD = "ADD"
 }
