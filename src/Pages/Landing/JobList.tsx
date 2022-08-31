@@ -15,7 +15,7 @@ export const JobList: FC = () => {
         setContainer((e) => !e);
     };
     return (
-        <div className=' d-flex flex-column text-light p-5 justify-content-around' id='job-list'>
+        <div className='d-flex flex-column text-light p-5 justify-content-around' id='job-list'>
             <div className='mt-5 w-100 card-container d-flex justify-content-around'>
                 <LittleCard
                     className='left--100'
