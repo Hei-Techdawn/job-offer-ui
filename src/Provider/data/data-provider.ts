@@ -29,7 +29,7 @@ class Dataprovider<T> {
     };
 
     addOne = async (data: T): Promise<T> => {
-        return await httpClient.post(this.endpoint, data, {auth: {...this.getAuth()} });
+        return await httpClient.post(this.endpoint, [data], {auth: {username: "admin", password: "12345678"} });
     };
 
     modifyOne = async (id: number, data: T) => {

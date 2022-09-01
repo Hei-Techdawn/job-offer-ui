@@ -17,7 +17,7 @@ const AddName: React.FC<{ label: string; endPoint: string; name: string, close: 
         e.preventDefault();
         if (state.length > 4) {
             provider
-                .addOne({ name: state })
+                .addOne({ "name": state })
                 .then(() => {
                     context.snackbar(`${name} bien ajoutée`, ESbType.SUCCESS);
                 })
