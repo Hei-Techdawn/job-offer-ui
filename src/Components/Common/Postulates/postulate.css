@@ -1,18 +1,17 @@
-
-.postInfo{
+.postInfo {
     width: 400px;
 }
 
-.userInfo{
+.userInfo {
     width: 350px;
 }
-.inputMail{
+.inputMail {
     margin-left: 50px;
     width: 300px;
 }
-.salaire{
+.salaire {
     width: 350px;
 }
-.inputSalaire{
+.inputSalaire {
     width: 150px;
 }

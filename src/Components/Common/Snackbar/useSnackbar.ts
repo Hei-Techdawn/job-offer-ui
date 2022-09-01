@@ -10,13 +10,13 @@ const sbInitialState: ISnackbarProps = {
 
 const useSnackbar = (): useSnackbarReturn => {
     const [snackState, setState] = useState<ISnackbarProps>(sbInitialState);
-    
+
     const close = () => setState((e) => ({ ...e, open: false }));
 
     const open = (label: string, type: ESbType) =>
         setState((e) => ({ ...e, label, type, open: true }));
 
-    return { snackState: {...snackState, close}, open };
+    return { snackState: { ...snackState, close }, open };
 };
 
 export default useSnackbar;

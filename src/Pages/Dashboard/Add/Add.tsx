@@ -1,12 +1,7 @@
 import React, { useContext } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { PrincipalContext } from '../../../Provider/context/contextProvider';
-import AddLieu from './AddName';
-import AddDomaine from './AddDomaine';
-import AddProfile from './AddProfile';
-import AddPoste from './AddPoste';
-import AddOffre from './AddOffre';
-import AddName from './AddName';
+import AddName from './AddName'
 
 const Add = () => {
     const context = useContext(PrincipalContext);
@@ -64,12 +59,17 @@ const Add = () => {
                         </tr>
                     </tbody>
                 </table>
-                <div className='d-flex w-100 justify-content-evenly'>
+                <div className='d-flex mt-5 w-100 justify-content-evenly'>
                     <div>
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(<AddOffre />);
+                                context.modal(<AddName
+                                    label='Ajouter une nouveau offre'
+                                    endPoint='offer'
+                                    name='Offre'
+                                    close={context.closeModal}
+                                />, "bg-secondary addName");
                             }}
                         >
                             {' '}
@@ -80,7 +80,12 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(<AddDomaine />);
+                                context.modal(<AddName
+                                    label='Ajouter une nouvelle domaine'
+                                    endPoint='domain'
+                                    name='Domaine'
+                                    close={context.closeModal}
+                                />, "bg-secondary addName");
                             }}
                         >
                             {' '}
@@ -91,7 +96,12 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(<AddPoste />, 'bg-success');
+                                context.modal(<AddName
+                                    label='Ajouter une nouvelle poste'
+                                    endPoint='position'
+                                    name='Poste'
+                                    close={context.closeModal}
+                                />, 'bg-secondary addName');
                             }}
                         >
                             {' '}
@@ -110,7 +120,7 @@ const Add = () => {
                                         name='Lieu'
                                         close={context.closeModal}
                                     />
-                                );
+                                , "bg-secondary addName");
                             }}
                         >
                             {' '}
@@ -121,11 +131,19 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(<AddProfile />);
+                                context.modal(
+                                    <AddName
+                                        label='Ajouter un nouveau profil'
+                                        endPoint='profile'
+                                        name='Profil'
+                                        close={context.closeModal}
+                                    />
+                                    , "bg-secondary addName"
+                                );
                             }}
                         >
                             {' '}
-                            <FaPlus /> Profile
+                            <FaPlus /> Profil
                         </button>
                     </div>
                 </div>

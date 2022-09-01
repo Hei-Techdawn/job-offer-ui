@@ -23,16 +23,16 @@
     transition: top 1s;
 }
 
-.modal-close{
+.modal-close {
     position: absolute;
     top: 0;
     right: 0;
     cursor: pointer;
     font-size: 1.5rem;
     color: red !important;
-    transition: font-size .2s;
+    transition: font-size 0.2s;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     font-size: 2rem;
 }

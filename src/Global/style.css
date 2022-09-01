@@ -106,3 +106,9 @@ body,
         opacity: 1;
     }
 }
+
+
+.addName{
+    width: 30vw !important;
+    height: 40vh !important;
+}

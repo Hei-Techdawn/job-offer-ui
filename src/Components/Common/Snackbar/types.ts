@@ -13,6 +13,6 @@ export interface ISnackbarProps {
 export type useSnackbarReturn = {
     open: TSnackbarOpen;
     snackState: ISnackbarProps;
-}
+};
 
 export type TSnackbarOpen = (label: string, type: ESbType) => void;

@@ -21,19 +21,19 @@ class Dataprovider<T> {
             size,
             order,
         };
-        return await httpClient.get(this.endpoint, { params, auth: {...this.getAuth()} });
+        return await httpClient.get(this.endpoint, { params, auth: this.getAuth() });
     };
 
     getOne = async (id: number): Promise<T> => {
-        return await httpClient.get(`${this.endpoint}/${id}`, {auth: {...this.getAuth()} });
+        return await httpClient.get(`${this.endpoint}/${id}`, {auth: this.getAuth() });
     };
 
     addOne = async (data: T): Promise<T> => {
-        return await httpClient.post(this.endpoint, data, {auth: {...this.getAuth()} });
+        return await httpClient.post(this.endpoint, data, {auth: {username: "admin", password: "12345678"} });
     };
 
     modifyOne = async (id: number, data: T) => {
-        return await httpClient.put(`${this.endpoint}/${id}`, data, {auth: {...this.getAuth()} });
+        return await httpClient.put(`${this.endpoint}/${id}`, data, {auth: this.getAuth() });
     };
 }
 

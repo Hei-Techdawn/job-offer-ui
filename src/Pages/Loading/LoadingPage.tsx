@@ -11,10 +11,12 @@ export const LoadingPage: FC = () => {
         const i = setTimeout(() => {
             if (to === 'landing') {
                 navigate('/landing');
-            } else if (localStorage.getItem('password')) {
+            } else if (to === "login") {
+                navigate('/login');
+            }else if (localStorage.getItem('password')) {
                 navigate('/dashboard');
             } else {
-                navigate('/login');
+                navigate('/landing');
             }
         }, 2000);
         return () => clearTimeout(i);

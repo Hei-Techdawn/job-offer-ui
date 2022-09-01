@@ -3,4 +3,4 @@ export type TLCProps = {
     job: string;
     profile: string;
     site: string;
-}
+};

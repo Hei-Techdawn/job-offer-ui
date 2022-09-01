@@ -7,10 +7,10 @@ interface PostulatesProps {
     poste?: any; // poste
     profile?: any; // profile
     lieu?: any; // lieu d'executio
-    close?: ()=>  void;
+    close?: () => void;
 }
 
-const Postulates: React.FC<PostulatesProps> = ({close}) => {
+const Postulates: React.FC<PostulatesProps> = ({ close }) => {
     return (
         <div className='postulate container text-light'>
             <h1 className='text-uppercase display-6 mt-2 fs-4'>Postuler a une offre d'emploie</h1>
@@ -51,7 +51,9 @@ const Postulates: React.FC<PostulatesProps> = ({close}) => {
                 </div>
             </div>
             <div className='w-100 d-flex mt-5 justify-content-around'>
-                <button onClick={close} className='btn w-25 btn-outline-primary'>Annuler</button>
+                <button onClick={close} className='btn w-25 btn-outline-primary'>
+                    Annuler
+                </button>
                 <button className='btn w-25 btn-outline-primary'>Enregistrer</button>
             </div>
         </div>

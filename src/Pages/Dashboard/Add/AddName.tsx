@@ -1,24 +1,23 @@
 import React, { FormEvent, useContext, useState } from 'react';
-import { PrincipalContext } from '../../../Provider/context/contextProvider';
-import DataProvider from '../../../Provider/data/data-provider';
-import { ESbType } from '../../../Components/Common/Snackbar/types';
+import DataProvider from "../../../Provider/data/data-provider";
+import {ESbType} from "../../../Components/Common/Snackbar/types";
+import {PrincipalContext} from "../../../Provider/context/contextProvider";
 
-const AddName: React.FC<{ label: string; endPoint: string; name: string, close: ()=> void }> = ({
+const AddName: React.FC<{ label: string; endPoint: string; name: string; close: () => void }> = ({
     endPoint,
     label,
     name,
-    close
+    close,
 }) => {
-    const context = useContext(PrincipalContext);
-    const provider = new DataProvider(endPoint);
     const [state, setState] = useState<string>('');
-
+    const provider = new DataProvider(endPoint);
+    const context = useContext(PrincipalContext)
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (state.length > 4) {
             provider
-                .addOne({ name: state })
-                .then(() => {
+                .addOne([{ name: state }])
+                .then((res) => {
                     context.snackbar(`${name} bien ajoutée`, ESbType.SUCCESS);
                 })
                 .catch((err) => {

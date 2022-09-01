@@ -17,8 +17,13 @@ import { TPrincipalContext } from './Provider/context/types';
 export const App: FC = () => {
     const { open, snackState } = useSnackbar();
     const menu = useMenu<TMenu>(TMenu.LIST);
-    const {modal, openModal} = useModal();
-    const context: TPrincipalContext = { snackbar: open,modal: openModal, closeModal: modal.closeModal, menu };
+    const { modal, openModal } = useModal();
+    const context: TPrincipalContext = {
+        snackbar: open,
+        modal: openModal,
+        closeModal: modal.closeModal,
+        menu,
+    };
 
     return (
         <div className='background fullscreen'>
@@ -33,8 +38,8 @@ export const App: FC = () => {
                     </Routes>
                 </PrincipalContext.Provider>
             )}
-            <Snackbar snackState={snackState} className="" />
-            <Modal modal={modal} className={modal.cN || ''}/>
+            <Snackbar snackState={snackState} className='' />
+            <Modal modal={modal} className={modal.cN || ''} />
         </div>
     );
 };

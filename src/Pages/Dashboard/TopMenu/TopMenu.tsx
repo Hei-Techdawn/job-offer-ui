@@ -14,7 +14,7 @@ export const TopMenu: FC<{ className?: string }> = ({ className }) => {
     };
 
     const login = () => {
-        navigate('/');
+        navigate('/?to=login');
     };
 
     return (
