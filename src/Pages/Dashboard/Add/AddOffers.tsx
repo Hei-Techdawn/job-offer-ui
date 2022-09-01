@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
-import { Domain, Option, Place, Profile } from '../../../Provider/data/type';
+import { Domain, Position, Place, Profile } from '../../../Provider/data/type';
 import httpClient from '../../../Provider/utils/http-client';
 
 const AddOffers: FC = () => {
-    const [position, setPosition] = useState<{ data: Option[] }>({ data: [] });
+    const [position, setPosition] = useState<{ data: Position[] }>({ data: [] });
     const [place, setPlace] = useState<{ data: Place[] }>({ data: [] });
     const [domain, setDomain] = useState<{ data: Domain[] }>({ data: [] });
     const [profile, setProfile] = useState<{ data: Profile[] }>({ data: [] });
