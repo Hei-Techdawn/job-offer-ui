@@ -12,8 +12,8 @@ interface PostulatesProps {
 
 const Postulates: React.FC<PostulatesProps> = ({ close }) => {
     return (
-        <div className='postulate container text-light'>
-            <h1 className='text-uppercase display-6 mt-2 fs-4'>Postuler a une offre d'emploie</h1>
+        <div className='postulate container text-dark'>
+            <h1 className='text-uppercase display-6 mt-2 fs-4'>Postuler à une offre d'emploi</h1>
             <hr />
             <div className='info row justify-content-around'>
                 <div className='userInfo col-6'>
@@ -29,7 +29,7 @@ const Postulates: React.FC<PostulatesProps> = ({ close }) => {
                         <input
                             type='number'
                             className='mt-2 form-control'
-                            placeholder='pretention salariale'
+                            placeholder='prétention salariale'
                         />
                     </div>
                 </div>
@@ -45,16 +45,16 @@ const Postulates: React.FC<PostulatesProps> = ({ close }) => {
                             <strong>profil :</strong> Bac+3 en informatique
                         </p>
                         <p>
-                            <strong>lieu d'execution :</strong> Remote
+                            <strong>lieu :</strong> Remote
                         </p>
                     </div>
                 </div>
             </div>
             <div className='w-100 d-flex mt-5 justify-content-around'>
-                <button onClick={close} className='btn w-25 btn-outline-primary'>
+                <button onClick={close} className='btn w-25 btn-danger'>
                     Annuler
                 </button>
-                <button className='btn w-25 btn-outline-primary'>Enregistrer</button>
+                <button className='btn w-25 btn-warning'>Enregistrer</button>
             </div>
         </div>
     );

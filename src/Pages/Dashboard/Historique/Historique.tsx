@@ -11,7 +11,7 @@ const Historique = () => {
                     <thead className='table-darck text-light bg-dark'>
                         <tr>
                             <td>Nom du candidat</td>
-                            <td>Poste demande</td>
+                            <td>Poste demandé</td>
                             <td>Domaine</td>
                             <td>Lieu</td>
                             <td>Date du candidature</td>

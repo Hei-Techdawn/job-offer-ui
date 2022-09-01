@@ -9,7 +9,7 @@ const Add = () => {
     return (
         <div className='w-100 container text-dark h-100 p-3'>
             <div className='d-flex justify-content-center mt-2'>
-                <h1>Creer des nouvelles offres</h1>
+                <h1>Créer des nouvelles offres</h1>
             </div>
             <div className='w-100 mt-1'>
                 <div className='d-flex mt-5 w-100 justify-content-evenly'>
@@ -17,10 +17,12 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
+
                                 context.modal(
                                     <AddOffers/>,
-                                    'bg-secondary'
+                                    ''
                                 );
+
                             }}
                         >
                             {' '}
@@ -31,15 +33,14 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(
-                                    <AddName
-                                        label='Ajouter une nouvelle domaine'
-                                        endPoint='domain'
-                                        name='Domaine'
-                                        close={context.closeModal}
-                                    />,
-                                    'bg-secondary addName'
-                                );
+
+                                context.modal(<AddName
+                                    label='Ajouter une nouvelle domaine'
+                                    endPoint='domain'
+                                    name='Domaine'
+                                    close={context.closeModal}
+                                />, "addName");
+
                             }}
                         >
                             {' '}
@@ -50,15 +51,14 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-                                context.modal(
-                                    <AddName
-                                        label='Ajouter une nouvelle poste'
-                                        endPoint='position'
-                                        name='Poste'
-                                        close={context.closeModal}
-                                    />,
-                                    'bg-secondary addName'
-                                );
+
+                                context.modal(<AddName
+                                    label='Ajouter une nouvelle poste'
+                                    endPoint='position'
+                                    name='Poste'
+                                    close={context.closeModal}
+                                />, 'addName');
+
                             }}
                         >
                             {' '}
@@ -76,9 +76,10 @@ const Add = () => {
                                         endPoint='place'
                                         name='Lieu'
                                         close={context.closeModal}
-                                    />,
-                                    'bg-secondary addName'
-                                );
+
+                                    />
+                                , "addName");
+
                             }}
                         >
                             {' '}
@@ -95,8 +96,10 @@ const Add = () => {
                                         endPoint='profile'
                                         name='Profil'
                                         close={context.closeModal}
-                                    />,
-                                    'bg-secondary addName'
+
+                                    />
+                                    , "addName"
+
                                 );
                             }}
                         >

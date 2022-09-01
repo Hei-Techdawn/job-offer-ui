@@ -45,7 +45,7 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
                 <LoginInput tools={tools} name='username' type='username' />
                 <LoginInput tools={tools} name='password' type='password' />
                 <button type='submit' className='w-100 mb-4 btn btn-warning mt-4'>
-                    Sign In
+                    Se connecter
                 </button>
                 <button onClick={landing} type='button' className='w-100 mb-4 btn btn-warning'>
                     Revenir à l'acceuil

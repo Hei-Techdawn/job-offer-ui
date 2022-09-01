@@ -52,7 +52,7 @@ export const TopMenu: FC<{ className?: string }> = ({ className }) => {
                                     onClick={login}
                                     className='border-theme btn btn-warning m-2'
                                 >
-                                    Se Connecter
+                                    Se connecter
                                 </button>
                             </>
                         )}

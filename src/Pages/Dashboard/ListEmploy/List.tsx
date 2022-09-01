@@ -21,7 +21,7 @@ const List = () => {
                 <table className='table'>
                     <thead className='table-dark text-light bg-dark'>
                         <tr>
-                            <td>Reference</td>
+                            <td>Référence</td>
                             <td>Domaine</td>
                             <td>Poste</td>
                             <td>Status</td>
