@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa8a7161-6342-4a13-8471-9d5ea94c0d7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddOffers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/useMove.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/data/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/data/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/utils/http-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/utils/http-client.ts" afterDir="false" />
-    </list>
+    <list default="true" id="aa8a7161-6342-4a13-8471-9d5ea94c0d7f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +96,7 @@
       <workItem from="1661589195452" duration="18250000" />
       <workItem from="1661964827277" duration="24327000" />
       <workItem from="1661995044445" duration="5222000" />
-      <workItem from="1662000928246" duration="10842000" />
+      <workItem from="1662000928246" duration="11340000" />
     </task>
     <servers />
   </component>
