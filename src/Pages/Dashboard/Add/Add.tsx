@@ -20,7 +20,7 @@ const Add = () => {
 
                                 context.modal(
                                     <AddOffers/>,
-                                    ''
+                                    'bg'
                                 );
 
                             }}

@@ -43,7 +43,7 @@ export type Offer = {
     ref?: string,
     description?: string,
     status?: string,
-    option?: Option,
+    position?: Position,
     place?: Place,
     profile?: Profile,
     domaine?: Domain
@@ -54,7 +54,7 @@ export type Place = {
     name?: string
 }
 
-export type Option = {
+export type Position = {
     id?: number,
     name?: string
 }
