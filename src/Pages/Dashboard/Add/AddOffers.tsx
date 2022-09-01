@@ -28,7 +28,8 @@ const AddOffers: FC = () => {
                 .post('offer', state, { auth })
                 .then((res) => {
                     if (res.data) {
-                        context.snackbar('Offre bien créée', ESbType.SUCCESS);
+                        alert("Opérations effectuée !!!")
+                        context.snackbar('Offre bien créée', ESbType.MESSAGE);
                         context.closeModal()
                     }
                 })

@@ -40,7 +40,7 @@ const Historique = () => {
                     }}
                     name=''
                     id=''
-                    className='select-form'
+                    className='form-select'
                 >
                     {domain !== undefined &&
                         domain.length !== 0 &&
