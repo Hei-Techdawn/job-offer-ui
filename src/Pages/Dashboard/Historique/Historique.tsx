@@ -3,21 +3,10 @@ import React from 'react';
 const Historique = () => {
     return (
         <div className='w-100 container text-darck h-100 p-3'>
-            <div className='w-100'>
-                <div className='d-flex w-50 justify-content-start'>
-                    <div className=''>
-                        <p>Status de l'offre :</p>
-                    </div>
-                    <div className='mx-2 '>
-                        <select className='form-select' aria-label='Default select example'>
-                            <option value='1'>Disponible</option>
-                            <option value='2'>Indisponible</option>
-                        </select>
-                    </div>
-                    <button className='btn btn-warning mx-4'>Filtrer</button>
-                </div>
+            <div className='d-flex justify-content-center mt-2'>
+                <h1>Historiques des candidatures</h1>
             </div>
-            <div className='w-100 mt-1'>
+            <div className='w-100 mt-3'>
                 <table className='table'>
                     <thead className='table-darck text-light bg-dark'>
                         <tr>

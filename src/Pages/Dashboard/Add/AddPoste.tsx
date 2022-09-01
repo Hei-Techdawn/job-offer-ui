@@ -13,7 +13,6 @@ const AddPoste: React.FC = () => {
                     name=''
                     id=''
                     aria-describedby='helpId'
-                    placeholder=''
                 />
                 <div className='d-flex justify-content-between'>
                     <button className='btn btn-warning'>Ajouter</button>

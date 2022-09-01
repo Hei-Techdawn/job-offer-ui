@@ -11,6 +11,9 @@ const Add = () => {
   const context = useContext(PrincipalContext)
     return (
         <div className='w-100 container text-dark h-100 p-3'>
+            <div className='d-flex justify-content-center mt-2'>
+                <h1>Creer des nouvelles offres</h1>
+            </div>
             <div className='w-100 mt-1'>
                 <table className='table'>
                     <thead className='table-dark text-light bg-dark'>
