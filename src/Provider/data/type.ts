@@ -10,9 +10,9 @@ export type TGetAll<T> = {
 
 export type Apply = {
     id?: number,
-    profile?: Profile,
     salary?: number,
     offer?: Offer,
+    date?: string;
     candidate?: Candidate
 }
 
@@ -25,7 +25,7 @@ export type Candidate = {
 
 export type Domain = {
     id?: Number,
-    name?: number,
+    name?: string,
     description?: string
 }
 

@@ -3,12 +3,11 @@ import { LittleCard } from '../../../Components/Common/LittleCard/LittleCard';
 import './style.css';
 import { Offer } from '../../../Provider/data/type';
 import httpClient from '../../../Provider/utils/http-client';
-import {log} from "util";
 
 export const JobCard: FC = () => {
     const [data, setData] = useState<Offer[]>([]);
     useEffect(() => {
-        httpClient.get('offer', { params: { page: 0, sort: true, size: 3 } }).then((res) => {
+        httpClient.get('offer', { params: { page: 0, sort: "true", size: 3 } }).then((res) => {
             setData(res.data.data);
         });
     }, []);

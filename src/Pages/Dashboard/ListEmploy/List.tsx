@@ -1,15 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Offer } from '../../../Provider/data/type';
 import httpClient from '../../../Provider/utils/http-client';
-import "./list.css"
-const List = () => {
-    const [offers, setOffres] = useState<Offer[]>([]);
+import './list.css';
+import { usePagination } from '../../../Components/Common/SimplePagination/Utils';
+import { SimplePagination } from '../../../Components/Common/SimplePagination/SimplePagination';
 
-    useEffect(() => {
-        httpClient.get('offer').then((res) => {
-            setOffres(res.data.data);
-        });
+const List = () => {
+    const [offers, setOffres] = useState<{ lastPage: number; currentPage: number; data: Offer[] }>({
+        data: [],
+        lastPage: 2,
+        currentPage: 1,
     });
+    const { page, setPage } = usePagination(offers.currentPage, offers.lastPage);
+    useEffect(() => {
+        update(page.currentPage);
+    });
+
+    const update = (thePage: number) => {
+        httpClient.get('offer', {params: {size: 6, page: thePage - 1}}).then((res) => {
+            setOffres({
+                data: res.data.data,
+                lastPage: res.data.lastPage,
+                currentPage: res.data.currentPage,
+            });
+        });
+    };
+
+    const newPage = (page: number) => {
+        setPage(page);
+        update(page)
+    }
 
     return (
         <div className='w-100 container text-dark h-100 p-3'>
@@ -19,7 +39,7 @@ const List = () => {
                         <p>Status de l'offre :</p>
                     </div>
                     <div className='mx-2 '>
-                        <select className='form-select' aria-label='Default select example'>
+                        <select className='form-select'>
                             <option value='1'>Disponible</option>
                             <option value='2'>Indisponible</option>
                         </select>
@@ -27,7 +47,7 @@ const List = () => {
                     <button className='btn btn-warning mx-4'>Filtrer</button>
                 </div>
             </div>
-            <div className='w-100 w-90-overflow mt-1'>
+            <div className='w-100 mt-1'>
                 <table className='table'>
                     <thead className='table-dark text-light bg-dark'>
                         <tr>
@@ -39,17 +59,21 @@ const List = () => {
                         </tr>
                     </thead>
                     <tbody className='text-dark'>
-                        {offers.length !== 0 &&
-                            offers.map((e) => (
+                        {offers.data.length !== 0 &&
+                            offers.data.map((e) => (
                                 <tr>
                                     <td>{e.ref}</td>
                                     <td>{e.domain?.name}</td>
                                     <td>{e.position?.name}</td>
-                                    <td>{e.status !== "valaible" ? "Disponible": "Indisponible"}</td>
+                                    <td>
+                                        {e.status !== 'valaible' ? 'Disponible' : 'Indisponible'}
+                                    </td>
                                     <td>
                                         <div className='d-flex'>
                                             <button className='btn bg-dark text-light'>
-                                                {e.status !== "valaible" ? "Disponible": "Indisponible"}
+                                                {e.status !== 'valaible'
+                                                    ? 'Disponible'
+                                                    : 'Indisponible'}
                                             </button>
                                         </div>
                                     </td>
@@ -57,6 +81,13 @@ const List = () => {
                             ))}
                     </tbody>
                 </table>
+                <div className='w-100'>
+                    <SimplePagination
+                        currentPage={page.currentPage}
+                        lastPage={page.lastPage}
+                        changePage={newPage}
+                    />
+                </div>
             </div>
         </div>
     );

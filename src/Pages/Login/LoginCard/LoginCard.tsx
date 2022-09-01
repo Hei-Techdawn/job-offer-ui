@@ -1,9 +1,9 @@
 import {FC, FormEvent, useContext, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { authProvider } from '../../Provider/auth/authProvider';
-import { authResult } from '../../Provider/auth/type';
-import { PrincipalContext } from '../../Provider/context/contextProvider';
-import { ESbType } from '../Common/Snackbar/types';
+import { authProvider } from '../../../Provider/auth/authProvider';
+import { authResult } from '../../../Provider/auth/type';
+import { PrincipalContext } from '../../../Provider/context/contextProvider';
+import { ESbType } from '../../../Components/Common/Snackbar/types';
 import { LoginInput } from './LoginInput';
 import { TLoginCardProps } from './types';
 import useLogin from './utils';

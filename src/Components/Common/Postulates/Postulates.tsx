@@ -11,11 +11,17 @@ interface PostulatesProps {
     close?: () => void;
 }
 
+const authLocal = {
+    username: localStorage.getItem('username') || '',
+    password: localStorage.getItem('password') || '',
+}
+
 const Postulates: React.FC<{ offer: Offer; close: () => void }> = ({ offer, close }) => {
     const [candidate, setCandidate] = useState({
-        lastname: '',
-        firstname: '',
+        lastName: '',
+        firstName: '',
         email: '',
+        address: "none"
     });
     const [apply, setApply] = useState({
         candidate,
@@ -36,12 +42,22 @@ const Postulates: React.FC<{ offer: Offer; close: () => void }> = ({ offer, clos
                             onChange={(input) => {
                                 setCandidate((e) => ({
                                     ...e,
-                                    lastname: input.target.value.split(' ')[0] || '',
-                                    firstname: input.target.value.split(' ')[1] || '',
+                                    lastName: input.target.value,
                                 }));
                             }}
                             type='text'
                             placeholder='Nom'
+                            className='form-control mb-2'
+                        />
+                        <input
+                            onChange={(input) => {
+                                setCandidate((e) => ({
+                                    ...e,
+                                    firstName: input.target.value,
+                                }));
+                            }}
+                            type='text'
+                            placeholder='Prénom'
                             className='form-control'
                         />
                         <input
@@ -86,7 +102,7 @@ const Postulates: React.FC<{ offer: Offer; close: () => void }> = ({ offer, clos
                         />
                     </div>
                 </div>
-                <div className='postInfo col-5'>
+                <div className='postInfo mt-5 col-5'>
                     <div>
                         <p>Information sur {offer.ref}</p>
                     </div>
@@ -109,12 +125,20 @@ const Postulates: React.FC<{ offer: Offer; close: () => void }> = ({ offer, clos
                 </button>
                 <button
                     onClick={() => {
-                        httpClient.post('apply', apply, {
-                            auth: {
-                                username: localStorage.getItem('username') || '',
-                                password: localStorage.getItem('password') || '',
-                            },
-                        });
+                        console.log([candidate])
+                        httpClient
+                            .post('candidate', [candidate],)
+                            .then((res) => {
+                                const candidate2 = res.data;
+                                console.log(candidate2)
+                                setApply((e) => ({ ...e, candidate: candidate2[0] }));
+                                httpClient.post('apply', apply).then(() => {
+                                    alert('Bien fait');
+                                });
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
                     }}
                     className='btn w-25 btn-warning'
                 >

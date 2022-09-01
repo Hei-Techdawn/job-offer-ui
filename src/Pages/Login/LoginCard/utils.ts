@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react';
-import { handleChange } from '../../Global/utils';
+import { handleChange } from '../../../Global/utils';
 import { TLoginProperties, useLoginReturn } from './types';
 
 /**

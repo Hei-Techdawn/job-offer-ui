@@ -29,7 +29,7 @@ export const LittleCard: FC<{ info: Offer; className?: string }> = ({ info, clas
             </div>
             <button
                 onClick={() => {
-                    context.modal(<Postulates close={context.closeModal} offer={info} />, "bg");
+                    context.modal(<Postulates close={context.closeModal} offer={info} />, "bg modal-landing");
                 }}
                 className='btn rounded-1 abs-end justify-self-end btn-warning'
             >

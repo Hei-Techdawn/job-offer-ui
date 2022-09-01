@@ -1,5 +1,5 @@
 import { CSSProperties, FC, useState } from 'react';
-import { textFormat } from '../../Global/utils';
+import { textFormat } from '../../../Global/utils';
 import { TLoginInput } from './types';
 import { FocusEvent } from 'react';
 
