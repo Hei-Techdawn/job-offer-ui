@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { PrincipalContext } from '../../../Provider/context/contextProvider';
-import AddLieu from './AddLieu'
-import AddDomaine from './AddDomaine'
-import AddProfile from './AddProfile'
-import AddPoste from './AddPoste'
-import AddOffre from './AddOffre'
+import AddLieu from './AddName';
+import AddDomaine from './AddDomaine';
+import AddProfile from './AddProfile';
+import AddPoste from './AddPoste';
+import AddOffre from './AddOffre';
+import AddName from './AddName';
 
 const Add = () => {
-  const context = useContext(PrincipalContext)
+    const context = useContext(PrincipalContext);
     return (
         <div className='w-100 container text-dark h-100 p-3'>
             <div className='d-flex justify-content-center mt-2'>
@@ -65,32 +66,64 @@ const Add = () => {
                 </table>
                 <div className='d-flex w-100 justify-content-evenly'>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddOffre/>, "bg-secondary")}}>
+                        <button
+                            className='btn btn-warning'
+                            onClick={() => {
+                                context.modal(<AddOffre />);
+                            }}
+                        >
                             {' '}
                             <FaPlus /> offre
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddDomaine/>, "bg-secondary")}}>
+                        <button
+                            className='btn btn-warning'
+                            onClick={() => {
+                                context.modal(<AddDomaine />);
+                            }}
+                        >
                             {' '}
                             <FaPlus /> Domaine
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddPoste/>, "bg-secondary")}}>
+                        <button
+                            className='btn btn-warning'
+                            onClick={() => {
+                                context.modal(<AddPoste />, 'bg-success');
+                            }}
+                        >
                             {' '}
                             <FaPlus /> Poste
                         </button>
                     </div>
 
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddLieu/>, "bg-secondary")}}>
+                        <button
+                            className='btn btn-warning'
+                            onClick={() => {
+                                context.modal(
+                                    <AddName
+                                        label='Ajouter un nouveau lieu'
+                                        endPoint='place'
+                                        name='Lieu'
+                                        close={context.closeModal}
+                                    />
+                                );
+                            }}
+                        >
                             {' '}
                             <FaPlus /> Lieu
                         </button>
                     </div>
                     <div>
-                        <button className='btn btn-warning' onClick={() => {context.modal(<AddProfile/>, "bg-secondary")}}>
+                        <button
+                            className='btn btn-warning'
+                            onClick={() => {
+                                context.modal(<AddProfile />);
+                            }}
+                        >
                             {' '}
                             <FaPlus /> Profile
                         </button>

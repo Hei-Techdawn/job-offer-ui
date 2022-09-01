@@ -1,17 +1,15 @@
-import httpClient from "../utils/http-client";
-import { authResult } from "./type";
+import httpClient from '../utils/http-client';
+import { authResult } from './type';
 
-export const authProvider = async (username: string, password: string): Promise<authResult> => {
-    try {
-        const { data: { role } } = await httpClient.get("whoami", { auth: { username: "", password: "" } });
-        localStorage.setItem("role", role);
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
-        return authResult.SUCCESS;
-    } catch {
-        localStorage.setItem("role", "role");
-        localStorage.setItem("username", "username");
-        localStorage.setItem("password", "password");
-        return password === "12345678" ? authResult.SUCCESS : authResult.FAILED;
-    }
+export const authProvider = (username: string, password: string): Promise<authResult> => {
+    return httpClient
+        .get('auth', { auth: { username: "admin", password: "12345678" } })
+        .then((result) => {
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            return authResult.SUCCESS;
+        })
+        .catch(() => {
+            return authResult.FAILED;
+        });
 };

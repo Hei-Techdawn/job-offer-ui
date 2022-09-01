@@ -1,37 +1,40 @@
-import httpClient from "../utils/http-client";
-import { EOrder, TGetAll } from "./type";
+import httpClient from '../utils/http-client';
+import { EOrder, TGetAll } from './type';
 
 class Dataprovider<T> {
     private endpoint: string;
-    private config = {
-        auth: {
-            username: localStorage.getItem("username") || '',
-            password: localStorage.getItem("password") || ''
-        }
-    };
 
     constructor(endpoint: string) {
         this.endpoint = endpoint;
     }
 
+    private getAuth = () => {
+        return {
+            username: localStorage.getItem('username') || '',
+            password: localStorage.getItem('password') || '',
+        };
+    };
+
     getAll = async (page: number, size: number, order: EOrder): Promise<TGetAll<T[]>> => {
         const params = {
-            page, size, order,
+            page,
+            size,
+            order,
         };
-        return await httpClient.get(this.endpoint, { params, ...this.config });
+        return await httpClient.get(this.endpoint, { params, auth: {...this.getAuth()} });
     };
 
     getOne = async (id: number): Promise<T> => {
-        return await httpClient.get(`${this.endpoint}/${id}`, this.config);
+        return await httpClient.get(`${this.endpoint}/${id}`, {auth: {...this.getAuth()} });
     };
 
     addOne = async (data: T): Promise<T> => {
-        return await httpClient.post(this.endpoint, data, this.config);
-    }
+        return await httpClient.post(this.endpoint, data, {auth: {...this.getAuth()} });
+    };
 
     modifyOne = async (id: number, data: T) => {
-        return await httpClient.put(`${this.endpoint}/${id}`, data, this.config);
-    }
+        return await httpClient.put(`${this.endpoint}/${id}`, data, {auth: {...this.getAuth()} });
+    };
 }
 
 export default Dataprovider;
