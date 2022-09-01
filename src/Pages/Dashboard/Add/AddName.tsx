@@ -31,7 +31,7 @@ const AddName: React.FC<{ label: string; endPoint: string; name: string; close: 
     return (
         <div className='container d-flex justify-content-center align-content-center h-100'>
             <form onSubmit={handleSubmit} className='form-group w-50 my-5'>
-                <label htmlFor='' className='text-light'>
+                <label htmlFor='' className='text-dark'>
                     <h5>{label}</h5>
                 </label>
                 <input

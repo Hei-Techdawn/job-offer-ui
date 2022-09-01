@@ -5,6 +5,7 @@ import { PrincipalContext } from '../../../Provider/context/contextProvider';
 import Postulates from '../Postulates/Postulates';
 
 export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, className }) => {
+    const Bg: string = "#000624";
     const context = useContext(PrincipalContext);
     return (
         <div className={`little-card p-2 text-dark fs-6 ${className}`}>
@@ -21,17 +22,17 @@ export const LittleCard: FC<{ info: TLCProps; className?: string }> = ({ info, c
                     <span>{info.profile}</span>
                 </div>
                 <div className='d-flex w-75 justify-content-between'>
-                    <span>Lieu d'execution: &nbsp;</span>
+                    <span>Lieu: &nbsp;</span>
                     <span>{info.site}</span>
                 </div>
             </div>
             <button
                 onClick={() => {
-                    context.modal(<Postulates />);
+                    context.modal(<Postulates />, "bg");
                 }}
                 className='btn rounded-1 abs-end justify-self-end btn-warning'
             >
-                Voir l'anonce
+                Voir l'annonce
             </button>
         </div>
     );

@@ -8,17 +8,17 @@ const Add = () => {
     return (
         <div className='w-100 container text-dark h-100 p-3'>
             <div className='d-flex justify-content-center mt-2'>
-                <h1>Creer des nouvelles offres</h1>
+                <h1>Créer des nouvelles offres</h1>
             </div>
             <div className='w-100 mt-1'>
                 <table className='table'>
                     <thead className='table-dark text-light bg-dark'>
                         <tr>
-                            <td>Reference</td>
+                            <td>Référence</td>
                             <td>Domaine</td>
                             <td>Poste</td>
                             <td>Lieu</td>
-                            <td>Profile</td>
+                            <td>Profil</td>
                         </tr>
                     </thead>
                     <tbody className='text-dark'>
@@ -69,7 +69,7 @@ const Add = () => {
                                     endPoint='offer'
                                     name='Offre'
                                     close={context.closeModal}
-                                />, "bg-secondary addName");
+                                />, "addName");
                             }}
                         >
                             {' '}
@@ -85,7 +85,7 @@ const Add = () => {
                                     endPoint='domain'
                                     name='Domaine'
                                     close={context.closeModal}
-                                />, "bg-secondary addName");
+                                />, "addName");
                             }}
                         >
                             {' '}
@@ -101,7 +101,7 @@ const Add = () => {
                                     endPoint='position'
                                     name='Poste'
                                     close={context.closeModal}
-                                />, 'bg-secondary addName');
+                                />, 'addName');
                             }}
                         >
                             {' '}
@@ -120,7 +120,7 @@ const Add = () => {
                                         name='Lieu'
                                         close={context.closeModal}
                                     />
-                                , "bg-secondary addName");
+                                , "addName");
                             }}
                         >
                             {' '}
@@ -138,7 +138,7 @@ const Add = () => {
                                         name='Profil'
                                         close={context.closeModal}
                                     />
-                                    , "bg-secondary addName"
+                                    , "addName"
                                 );
                             }}
                         >

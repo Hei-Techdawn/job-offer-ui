@@ -18,7 +18,7 @@ const JobList: FC = () => {
                 >
                     <div>
                         <p className='m-2 display-6 fs-4'>
-                            {container ? 'Fermer' : 'Voir tout les offres'}
+                            {container ? 'Fermer' : 'Voir toutes les offres'}
                         </p>
                     </div>
                     <div>{!container ? <BiPlus className='m-2' /> : <BiMinus className="m-2" />}</div>
