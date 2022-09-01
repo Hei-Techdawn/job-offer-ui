@@ -34,25 +34,16 @@ export type History = {
     id?: number,
     type?: string,
     date?: string,
-    offre?: Offer,
+    offer?: Offer,
     candidate?: Candidate
-}
-
-export type MyUser = {
-    id?: number,
-    lastName?: string,
-    firstName?: string,
-    userName?: string,
-    password?: string,
-    role?: string
 }
 
 export type Offer = {
     id?: number,
     ref?: string,
-    name?: string,
+    description?: string,
     status?: string,
-    job?: Job,
+    option?: Option,
     place?: Place,
     profile?: Profile,
     domaine?: Domain
@@ -63,7 +54,7 @@ export type Place = {
     name?: string
 }
 
-export type Job = {
+export type Option = {
     id?: number,
     name?: string
 }

@@ -22,6 +22,7 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
             authProvider(tools.inputs.username, tools.inputs.password)
                 .then((res) => {
                     if (res === authResult.FAILED) {
+                        console.log(res)
                         context.snackbar('Veuillez vérifier vos identifiants', ESbType.ERROR);
                     } else {
                         navigate('/');

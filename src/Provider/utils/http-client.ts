@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || ''
+    baseURL: 'https://db9e-154-126-100-31.eu.ngrok.io'
 });
 
 export default httpClient;

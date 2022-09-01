@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa8a7161-6342-4a13-8471-9d5ea94c0d7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddOffers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/useMove.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/LittleCard/LittleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/LittleCard/LittleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/LittleCard/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/LittleCard/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/LittleCard/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/LittleCard/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Loading/Loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Loading/Loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Loading/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Loading/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/useModal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/useModal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Postulates/Postulates.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Postulates/Postulates.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Postulates/postulate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Postulates/postulate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Snackbar/Snackbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Snackbar/Snackbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Snackbar/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Snackbar/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Snackbar/useSnackbar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Snackbar/useSnackbar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/LoginInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/LoginInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Global/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Global/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddDomaine.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddName.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddOffre.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddPoste.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddProfile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/TopMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/TopMenu/TopMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Landing/Welcome/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Landing/Welcome/WelcomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Loading/LoadingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Loading/LoadingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/auth/authProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/auth/authProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/data/data-provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/data/data-provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Provider/data/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/data/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Provider/utils/http-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/utils/http-client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +105,7 @@
       <workItem from="1661589195452" duration="18250000" />
       <workItem from="1661964827277" duration="24327000" />
       <workItem from="1661995044445" duration="5222000" />
-      <workItem from="1662000928246" duration="6216000" />
+      <workItem from="1662000928246" duration="10842000" />
     </task>
     <servers />
   </component>
