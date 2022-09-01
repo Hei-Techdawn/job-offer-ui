@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa8a7161-6342-4a13-8471-9d5ea94c0d7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddName.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Loading/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Loading/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Common/Modal/useModal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Common/Modal/useModal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Global/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Global/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LoginCard/LoginCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Add/Add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/SideMenu/MenuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard/SideMenu/MenuItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Error/ErrorPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Error/ErrorPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Error/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Error/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/context/contextProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/context/contextProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/context/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/context/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard/Add/AddLieu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Provider/auth/authProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/auth/authProvider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Provider/data/data-provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/data/data-provider.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +102,7 @@
       <workItem from="1661532649205" duration="19483000" />
       <workItem from="1661570190612" duration="8858000" />
       <workItem from="1661589195452" duration="18250000" />
-      <workItem from="1661964827277" duration="20659000" />
+      <workItem from="1661964827277" duration="24327000" />
     </task>
     <servers />
   </component>

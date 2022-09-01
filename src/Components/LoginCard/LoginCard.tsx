@@ -16,24 +16,26 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if(tools.inputs.username.length==0 || tools.inputs.password.length==0){
-            context.snackbar("Veuillez vérifier vos identifiants", ESbType.ERROR)
-        }else{
-            const auth: authResult = await authProvider(
-                tools.inputs.username,
-                tools.inputs.password
-            );
-            if(auth === authResult.SUCCESS){
-                navigate("/");
-            }else {
-                context.snackbar("Veuillez vérifier vos identifiants", ESbType.ERROR)
-            }
+        if (tools.inputs.username.length === 0 || tools.inputs.password.length === 0) {
+            context.snackbar('Veuillez vérifier vos identifiants', ESbType.ERROR);
+        } else {
+            authProvider(tools.inputs.username, tools.inputs.password)
+                .then((res) => {
+                    if (res === authResult.FAILED) {
+                        context.snackbar('Veuillez vérifier vos identifiants', ESbType.ERROR);
+                    } else {
+                        navigate('/');
+                    }
+                })
+                .catch(() => {
+                    context.snackbar('Veuillez vérifier vos identifiants', ESbType.ERROR);
+                });
         }
-    }
+    };
 
     const landing = () => {
-        navigate("/?to=landing")
-    }
+        navigate('/?to=landing');
+    };
 
     return (
         <div className={'abs-center p-3 flex-center text-light ' + className}>
@@ -44,17 +46,12 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
                 <button type='submit' className='w-100 mb-4 btn btn-warning mt-4'>
                     Sign In
                 </button>
-                <button
-                    onClick={landing}
-                    type='button'
-                    className='w-100 mb-4 btn btn-warning'
-                >
+                <button onClick={landing} type='button' className='w-100 mb-4 btn btn-warning'>
                     Revenir à l'acceuil
                 </button>
             </form>
         </div>
     );
 };
-
 
 export default LoginCard;
