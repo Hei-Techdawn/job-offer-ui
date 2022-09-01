@@ -1,4 +1,4 @@
-import { FC, FormEvent, useContext } from 'react';
+import {FC, FormEvent, useContext, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authProvider } from '../../Provider/auth/authProvider';
 import { authResult } from '../../Provider/auth/type';
@@ -13,6 +13,12 @@ const LoginCard: FC<TLoginCardProps> = (props) => {
     const { className } = props;
     const context = useContext(PrincipalContext);
     const navigate = useNavigate();
+
+    useEffect(()=> {
+        if(localStorage.getItem("password")){
+            navigate("/dashboard")
+        }
+    })
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();

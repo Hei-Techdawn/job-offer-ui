@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from "react";
+import {FC, useContext, useEffect, useState} from "react";
 import { SideMenu } from "./SideMenu/SideMenu";
 import { TopMenu } from "./TopMenu/TopMenu";
 import "./style.css"
@@ -8,9 +8,16 @@ import { TMenu } from "../../Global/types";
 import List from "./ListEmploy/List";
 import Historique from './Historique/Historique'
 import AddOffre from './Add/Add'
+import {useNavigate} from "react-router-dom";
 
 export const Dashboard:FC = () => {
     const context = useContext(PrincipalContext);
+    const navigate = useNavigate();
+    useEffect(()=> {
+        if(localStorage.getItem("password") === null){
+            navigate("/?to=login")
+        }
+    })
     return (
         <div className='fullscreen'>
             <div className='d-flex dashboard'>

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { PrincipalContext } from '../../../Provider/context/contextProvider';
 import AddName from './AddName';
-import AddOffers from "./AddOffers";
+import AddOffers from './AddOffers';
 
 const Add = () => {
     const context = useContext(PrincipalContext);
@@ -17,12 +17,7 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-
-                                context.modal(
-                                    <AddOffers/>,
-                                    'bg'
-                                );
-
+                                context.modal(<AddOffers />, 'bg');
                             }}
                         >
                             {' '}
@@ -33,14 +28,15 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-
-                                context.modal(<AddName
-                                    label='Ajouter une nouvelle domaine'
-                                    endPoint='domain'
-                                    name='Domaine'
-                                    close={context.closeModal}
-                                />, "addName");
-
+                                context.modal(
+                                    <AddName
+                                        label='Ajouter une nouvelle domaine'
+                                        endPoint='domain'
+                                        name='Domaine'
+                                        close={context.closeModal}
+                                    />,
+                                    'addName'
+                                );
                             }}
                         >
                             {' '}
@@ -51,14 +47,15 @@ const Add = () => {
                         <button
                             className='btn btn-warning'
                             onClick={() => {
-
-                                context.modal(<AddName
-                                    label='Ajouter une nouvelle poste'
-                                    endPoint='position'
-                                    name='Poste'
-                                    close={context.closeModal}
-                                />, 'addName');
-
+                                context.modal(
+                                    <AddName
+                                        label='Ajouter une nouvelle poste'
+                                        endPoint='position'
+                                        name='Poste'
+                                        close={context.closeModal}
+                                    />,
+                                    'addName'
+                                );
                             }}
                         >
                             {' '}
@@ -76,10 +73,9 @@ const Add = () => {
                                         endPoint='place'
                                         name='Lieu'
                                         close={context.closeModal}
-
-                                    />
-                                , "addName");
-
+                                    />,
+                                    'addName'
+                                );
                             }}
                         >
                             {' '}
@@ -96,10 +92,8 @@ const Add = () => {
                                         endPoint='profile'
                                         name='Profil'
                                         close={context.closeModal}
-
-                                    />
-                                    , "addName"
-
+                                    />,
+                                    'addName'
                                 );
                             }}
                         >

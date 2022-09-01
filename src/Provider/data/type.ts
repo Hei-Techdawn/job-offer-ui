@@ -12,41 +12,41 @@ export type Apply = {
     id?: number,
     profile?: Profile,
     salary?: number,
-    date?: string,
     offer?: Offer,
     candidate?: Candidate
 }
 
 export type Candidate = {
-    lastName?: string,
-    firstName?: string,
-    email?: string,
+    lastName?: number,
+    firstName?: number,
+    email?: number,
     address?: string
 }
 
 export type Domain = {
     id?: Number,
-    name?: string,
+    name?: number,
     description?: string
 }
 
 export type History = {
     id?: number,
-    type?: string,
-    date?: string,
+    type?: number,
+    date?: number,
     offer?: Offer,
     candidate?: Candidate
 }
 
 export type Offer = {
     id?: number,
-    ref?: string,
-    description?: string,
+    name?:string,
+    ref?: number,
+    description?: number,
     status?: string,
     position?: Position,
     place?: Place,
     profile?: Profile,
-    domaine?: Domain
+    domain?: Domain
 }
 
 export type Place = {
@@ -61,5 +61,5 @@ export type Position = {
 
 export type Profile = {
     id?: number,
-    profile?: string
+    name?: string
 }

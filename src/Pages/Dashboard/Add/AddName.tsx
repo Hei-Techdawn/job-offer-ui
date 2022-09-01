@@ -14,6 +14,10 @@ const AddName: React.FC<{ label: string; endPoint: string; name: string; close: 
     const context = useContext(PrincipalContext)
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setTimeout(()=> {
+            context.snackbar('Offre bien créée', ESbType.SUCCESS);
+            context.closeModal()
+        }, 2000)
         if (state.length > 4) {
             provider
                 .addOne([{ name: state }])

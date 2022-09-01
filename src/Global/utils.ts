@@ -11,5 +11,5 @@ export const textFormat = (e: string): string => {
 export const getErrorParams = (): urlErrorParams => {
     const {search} = document.location;
     const params = new URLSearchParams(search);
-    return {message: params.get("message") || "Ressource not found", code: params.get("code") || "404"}
+    return {message: params.get("message") || "Ressource non trouvé", code: params.get("code") || "404"}
 }

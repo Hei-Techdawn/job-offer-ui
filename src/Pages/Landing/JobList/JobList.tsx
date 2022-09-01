@@ -1,16 +1,26 @@
-import { FC, useState } from 'react';
+import {FC, useEffect, useState} from 'react';
 import { BiPlus, BiMinus } from 'react-icons/bi';
 import { LittleCard } from '../../../Components/Common/LittleCard/LittleCard';
 import "./style.css"
+import {Offer} from "../../../Provider/data/type";
+import httpClient from "../../../Provider/utils/http-client";
 
 const JobList: FC = () => {
     const [container, setContainer] = useState(true);
+    const [data, setData] = useState<Offer[]>([])
+
     const toggleContainer = () => {
         setContainer((e) => !e);
     };
 
+    useEffect(()=> {
+        httpClient.get('offer', {params: {page: 1,sort: true}}).then(res=> {
+            setData(res.data.data);
+        })
+    }, [])
+
     return (
-        <div className='text-dark'>
+        <div className='text-dark mb-5'>
             <div className='w-100 multiples-cards'>
                 <div
                     onClick={toggleContainer}
@@ -32,15 +42,10 @@ const JobList: FC = () => {
                 }}
                     className='row justify-content-around all-card-container'
                 >
-                    {[0, 0, 0].map((e) => (
+                    {data.length !== 0 && data.map((e) => (
                         <LittleCard
-                            className='col-3 mt-2'
-                            info={{
-                                domain: 'Informatique',
-                                job: 'Developpeur',
-                                site: 'full remote',
-                                profile: 'bacc+3',
-                            }}
+                        className='col-3 m-2'
+                        info={e}
                         />
                     ))}
                 </div>
