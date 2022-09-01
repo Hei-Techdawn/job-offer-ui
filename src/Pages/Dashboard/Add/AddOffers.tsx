@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { Domain, Position, Place, Profile } from '../../../Provider/data/type';
+import {Domain, Position, Place, Profile, Offer} from '../../../Provider/data/type';
 import httpClient from '../../../Provider/utils/http-client';
 
 const AddOffers: FC = () => {
@@ -7,6 +7,7 @@ const AddOffers: FC = () => {
     const [place, setPlace] = useState<{ data: Place[] }>({ data: [] });
     const [domain, setDomain] = useState<{ data: Domain[] }>({ data: [] });
     const [profile, setProfile] = useState<{ data: Profile[] }>({ data: [] });
+    const [state, setState] = useState<Offer>({});
     const auth = {
         username: localStorage.getItem('username') || '',
         password: localStorage.getItem('password') || '',
@@ -33,17 +34,25 @@ const AddOffers: FC = () => {
             <form className='form-group p-2'>
                 <div className='input-group m-2'>
                     <button className='btn btn-outline-dark'>Poste</button>
-                    <select name='' id='' className='form-select'></select>
+                    <select name='' id='' className='form-select'>
+                        {position.data.map((e)=> <option value={e.id}>{e.name}</option>)}
+                    </select>
                 </div>
                 <div className='input-group m-2'>
                     <button className='btn btn-outline-dark'>Lieu</button>
-                    <select name='' id='' className='form-select'></select>
+                    <select name='' id='' className='form-select'>
+                        {position.data.map((e)=> <option value={e.id}>{e.name}</option>)}
+                    </select>
                 </div>
                 <div className='input-group m-2'>
                     <button className='btn btn-outline-dark'>Domaine</button>
-                    <select name='' id='' className='form-select'></select>
+                    <select name='' id='' className='form-select'>
+                        {position.data.map((e)=> <option value={e.id}>{e.name}</option>)}
+                    </select>
                 </div>
-                <div className='w-100 d-flex align-items-center justify-content-between'></div>
+                <div className='w-100 d-flex align-items-center justify-content-between'>
+                    {position.data.map((e)=> <option value={e.id}>{e.name}</option>)}
+                </div>
             </form>
         </div>
     );
